@@ -395,7 +395,7 @@ Abc_Ntk_t * Io_ReadPlaNetwork( Extra_FileReader_t * p, int fZeros, int fBoth, in
             continue;
 
         // if it is the model name, get the name
-        if ( strcmp( (char *)vTokens->pArray[0], ".model" ) == 0 )
+        if ( strcmp( (char *)vTokens->pArray[0], ".name" ) == 0 )
         {
             ABC_FREE( pNtk->pName );
             pNtk->pName = Extra_UtilStrsav( (char *)vTokens->pArray[1] );
